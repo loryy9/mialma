@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Alma - Contatti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="testata">
+        <nav class="barra-navigazione" aria-label="Navigazione principale">
+            <a href="index.html" class="marchio" aria-label="Mi Alma">
+                <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
+            </a>
+            <ul class="menu-principale">
+                <li><a class="link-menu" href="index.html">Home</a></li>
+                <li><a class="link-menu" href="chi-siamo.html">Chi siamo</a></li>
+                <li><a class="link-menu" href="servizi.html">Servizi</a></li>
+                <li><a class="link-menu" href="influencer.html">Influencer</a></li>
+                <li><a class="link-menu" href="contatti.html">Contatti</a></li>
+            </ul>
+            <a class="bottone bottone-primario" href="form-contatti.html">Fissiamo una call</a>
+        </nav>
+    </header>
+
+    <div class="contenuto">
+        <section class="form-contatti" aria-labelledby="titolo-form-contatti">
+            <div class="contenitore-contatti">
+                <aside class="intro-contatti" aria-label="Perche fissare una call con Mi Alma">
+                    <p class="etichetta-intro">Consulenza personalizzata</p>
+                    <h1 id="titolo-form-contatti">Parliamo del tuo prossimo salto digitale</h1>
+                    <p>Raccontaci obiettivi, timing e priorita. Ti rispondiamo entro 24 ore con una proposta concreta e
+                        su misura.</p>
+                    <ul class="lista-punti">
+                        <li>Analisi iniziale gratuita</li>
+                        <li>Strategia orientata ai risultati</li>
+                        <li>Roadmap chiara e operativa</li>
+                    </ul>
+                </aside>
+
+                <div class="contenitore-form">
+                    <form class="form-contatti" action="#" method="post">
+                        <div class="griglia-campi">
+                            <div class="campo-form">
+                                <label for="nome">Nome e cognome</label>
+                                <input type="text" id="nome" name="nome" placeholder="Es. Gaia Zerbin" required>
+                            </div>
+
+                            <div class="campo-form">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="nome@email.it" required>
+                            </div>
+
+                            <div class="campo-form">
+                                <label for="azienda">Azienda</label>
+                                <input type="text" id="azienda" name="azienda" placeholder="Nome azienda">
+                            </div>
+
+                            <div class="campo-form">
+                                <label for="telefono">Telefono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+39 ...">
+                            </div>
+
+                            <div class="campo-form campo-intero">
+                                <label for="messaggio">Di cosa hai bisogno?</label>
+                                <textarea id="messaggio" name="messaggio" rows="6"
+                                    placeholder="Descrivici obiettivi, canali e urgenze..." required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="azioni-form">
+                            <button type="submit" class="bottone bottone-primario">Invia richiesta</button>
+                            <small>Ti contattiamo entro un giorno lavorativo.</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="piede-di-pagina">
+        <p>(c) 2024 Mi Alma. All rights reserved.</p>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+        <p class="stato">Agency status: online</p>
+    </footer>
+</body>
+
+</html>
