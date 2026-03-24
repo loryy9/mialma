@@ -10,31 +10,43 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <header class="testata">
-        <nav class="barra-navigazione" aria-label="Navigazione principale">
-            <a href="index.html" class="marchio" aria-label="Mi Alma">
-                <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
-            </a>
-            <ul class="menu-principale">
-                <li><a class="link-menu attivo" href="index.html">Home</a></li>
-                <li><a class="link-menu" href="chi-siamo.html">Chi siamo</a></li>
-                <li><a class="link-menu" href="servizi.html">Servizi</a></li>
-                <li><a class="link-menu" href="influencer.html">Influencer</a></li>
-                <li><a class="link-menu" href="contatti.html">Contatti</a></li>
-            </ul>
-            <a class="bottone bottone-primario" href="form-contatti.html">Fissiamo una call</a>
+        <nav class="navbar navbar-expand-lg barra-navigazione" aria-label="Navigazione principale">
+            <div class="container-fluid contenitore-navbar">
+                <a href="index.html" class="marchio navbar-brand" aria-label="Mi Alma">
+                    <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
+                </a>
+                <button class="navbar-toggler toggler-menu" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu-principale" aria-controls="menu-principale" aria-expanded="false"
+                    aria-label="Apri navigazione">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principale">
+                    <ul class="navbar-nav menu-principale mx-lg-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link link-menu attivo" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="chi-siamo.html">Chi siamo</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="servizi.html">Servizi</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="influencer.html">Influencer</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="contatti.html">Contatti</a></li>
+                    </ul>
+                    <a class="bottone bottone-primario bottone-nav mt-2 mt-lg-0" href="form-contatti.html">Fissiamo una call</a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <div class="contenuto" id="home">
-        <section class="hero" aria-labelledby="titolo-hero">
+    <div class="contenuto">
+        <section class="hero" >
             <div class="testo-hero">
                 <span class="etichetta">Innovazione digitale</span>
-                <h1 id="titolo-hero">Eleviamo il tuo brand nello <span>spazio digitale</span></h1>
+                <h1>Eleviamo il tuo brand nello <span class="testo-colorato">spazio digitale</span></h1>
                 <p>Strategie editoriali di alto livello che trasformano follower in autorita. Creiamo contenuti che
                     respirano e campagne che convertono.</p>
                 <div class="azioni-hero">
@@ -43,12 +55,34 @@
                 </div>
             </div>
 
-            <figure class="vetrina-hero" aria-label="Preview performance">
-                <figcaption class="badge-vetrina">Live reach <strong>+240%</strong></figcaption>
-            </figure>
+            <div class="vetrina-hero" aria-label="Preview performance">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/team.png" class="d-block w-100" alt="Team creativo al lavoro">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/logo_rosa.png" class="d-block w-100" alt="Logo Mi Alma">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/team.png" class="d-block w-100" alt="Sessione strategica social">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
         </section>
 
-        <section class="sezione-statistiche" aria-label="Metriche principali">
+        <section class="sezione-statistiche" >
             <div class="griglia-statistiche">
                 <div class="card-statistica">
                     <p class="valore">+200%</p>
@@ -69,10 +103,10 @@
             </div>
         </section>
 
-        <section class="sezione-servizi" id="servizi" aria-labelledby="titolo-servizi">
+        <section class="sezione-servizi" id="servizi" >
             <div class="intestazione-servizi">
                 <div>
-                    <h2 id="titolo-servizi">Servizi core per <span>impatto totale</span></h2>
+                    <h2>Servizi core per <span class="testo-colorato">impatto totale</span></h2>
                     <p>Non siamo una semplice agenzia. Siamo il dipartimento creativo e strategico che la tua azienda ha
                         sempre desiderato.</p>
                 </div>
@@ -80,7 +114,7 @@
             </div>
 
             <div class="griglia-servizi">
-                <div class="card-servizio card-ampia card-lilla" id="chi-siamo">
+                <div class="card-servizio card-ampia card-lilla">
                     <h3>Social strategy</h3>
                     <p>Analisi del target e posizionamento di marca attraverso strategie multicanale basate sui dati.
                     </p>
@@ -100,16 +134,16 @@
                     <p>Gestione budget pubblicitari con focus ossessivo sul ROI e sull'acquisizione lead.</p>
                 </div>
 
-                <div class="card-servizio card-gradiente card-ampia" id="influencer">
+                <div class="card-servizio card-viola card-ampia">
                     <h3>Influencer marketing</h3>
                     <p>Connettiamo il tuo brand con le voci piu autorevoli del settore per campagne autentiche.</p>
                 </div>
             </div>
         </section>
 
-        <section class="sezione-cta" id="cta" aria-labelledby="titolo-cta">
+        <section class="sezione-cta">
             <div class="contenitore-cta">
-                <h2 id="titolo-cta">Pronto a scalare il tuo impatto?</h2>
+            <h2>Pronto a scalare il tuo impatto?</h2>
                 <p>Le opportunita digitali non aspettano. Prenota oggi una consulenza gratuita e scopri come possiamo
                     trasformare il tuo brand.</p>
                 <a class="bottone bottone-primario" href="form-contatti.html">Inizia il tuo viaggio</a>
@@ -128,6 +162,8 @@
         </ul>
         <p class="stato">Agency status: online</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>

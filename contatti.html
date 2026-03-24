@@ -10,35 +10,47 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <header class="testata">
-        <nav class="barra-navigazione" aria-label="Navigazione principale">
-            <a href="index.html" class="marchio" aria-label="Mi Alma">
-                <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
-            </a>
-            <ul class="menu-principale">
-                <li><a class="link-menu" href="index.html">Home</a></li>
-                <li><a class="link-menu" href="chi-siamo.html">Chi siamo</a></li>
-                <li><a class="link-menu" href="servizi.html">Servizi</a></li>
-                <li><a class="link-menu" href="influencer.html">Influencer</a></li>
-                <li><a class="link-menu attivo" href="contatti.html">Contatti</a></li>
-            </ul>
-            <a class="bottone bottone-primario" href="form-contatti.html">Fissiamo una call</a>
+        <nav class="navbar navbar-expand-lg barra-navigazione">
+            <div class="container-fluid contenitore-navbar">
+                <a href="index.html" class="marchio navbar-brand">
+                    <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
+                </a>
+                <button class="navbar-toggler toggler-menu" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu-principale" aria-controls="menu-principale" aria-expanded="false"
+                    aria-label="Apri navigazione">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principale">
+                    <ul class="navbar-nav menu-principale mx-lg-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link link-menu" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="chi-siamo.html">Chi siamo</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="servizi.html">Servizi</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="influencer.html">Influencer</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu attivo" aria-current="page" href="contatti.html">Contatti</a></li>
+                    </ul>
+                    <a class="bottone bottone-primario bottone-nav mt-2 mt-lg-0" href="form-contatti.html">Fissiamo una call</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <div class="contenuto">
-        <section class="hero-contatti" aria-labelledby="titolo-contatti">
+        <section class="hero-contatti">
             <div class="contenitore-sezione testo-contatti">
-                <h1 id="titolo-contatti">Scrivici, chiama o fermati <span>da noi</span></h1>
+                <h1>Scrivici, chiama o fermati <span class="testo-colorato">da noi</span></h1>
                 <p>Siamo a Torino e pronti ad ascoltare le tue idee. Rispondiamo a tutti i messaggi entro 24 ore.</p>
             </div>
         </section>
 
-        <section class="sezione-contatti-info" aria-labelledby="titolo-info">
+        <section class="sezione-contatti-info">
             <div class="griglia-contatti">
                 <div class="card-contatto">
                     <h3>Telefono</h3>
@@ -63,15 +75,15 @@
             </div>
         </section>
 
-        <section class="sezione-mappa" aria-label="Localizzazione Mi Alma">
+        <section class="sezione-mappa">
             <div class="contenitore-sezione">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.7672951911245!2d7.689819187948889!3d45.06601469187894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886d6339de7307%3A0x282e90987e912fde!2sUniversit%C3%A0%20degli%20Studi%20di%20Torino!5e0!3m2!1sit!2sit!4v1774211234666!5m2!1sit!2sit" width="100%" height="450" style="border:0; border-radius: 30px;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
-        <section class="sezione-orari" aria-labelledby="titolo-orari">
+        <section class="sezione-orari">
             <div class="contenitore-sezione">
-                <h2 id="titolo-orari">Orari di apertura</h2>
+                <h2>Orari di apertura</h2>
                 <table class="tabella-orari">
                     <tbody>
                         <tr>
@@ -91,9 +103,9 @@
             </div>
         </section>
 
-        <section class="sezione-cta" id="cta-contatti" aria-labelledby="titolo-cta-contatti">
+        <section class="sezione-cta">
             <div class="contenitore-cta">
-                <h2 id="titolo-cta-contatti">Pronto a trasformare il tuo brand?</h2>
+                <h2>Pronto a trasformare il tuo brand?</h2>
                 <p>Fissa una call con uno dei nostri esperti e scopri come Mi Alma può aiutarti a raggiungere i tuoi
                     obiettivi digitali.</p>
                 <a class="bottone bottone-primario" href="form-contatti.html">Richiedi una consulenza</a>
@@ -112,6 +124,8 @@
         </ul>
         <p class="stato">Agency status: online</p>
     </footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>

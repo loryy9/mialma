@@ -10,31 +10,43 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <header class="testata">
-        <nav class="barra-navigazione" aria-label="Navigazione principale">
-            <a href="index.html" class="marchio" aria-label="Mi Alma">
-                <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
-            </a>
-            <ul class="menu-principale">
-                <li><a class="link-menu" href="index.html">Home</a></li>
-                <li><a class="link-menu" href="chi-siamo.html">Chi siamo</a></li>
-                <li><a class="link-menu attivo" href="servizi.html">Servizi</a></li>
-                <li><a class="link-menu" href="influencer.html">Influencer</a></li>
-                <li><a class="link-menu" href="contatti.html">Contatti</a></li>
-            </ul>
-            <a class="bottone bottone-primario" href="form-contatti.html">Fissiamo una call</a>
+        <nav class="navbar navbar-expand-lg barra-navigazione">
+            <div class="container-fluid contenitore-navbar">
+                <a href="index.html" class="marchio navbar-brand">
+                    <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
+                </a>
+                <button class="navbar-toggler toggler-menu" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu-principale" aria-controls="menu-principale" aria-expanded="false"
+                    aria-label="Apri navigazione">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principale">
+                    <ul class="navbar-nav menu-principale mx-lg-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link link-menu" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="chi-siamo.html">Chi siamo</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu attivo" aria-current="page" href="servizi.html">Servizi</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="influencer.html">Influencer</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="contatti.html">Contatti</a></li>
+                    </ul>
+                    <a class="bottone bottone-primario bottone-nav mt-2 mt-lg-0" href="form-contatti.html">Fissiamo una call</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <div class="contenuto">
-        <section class="sezione-servizi-completa" aria-labelledby="titolo-servizi-completa">
+        <section class="sezione-servizi-completa">
             <div class="intestazione-servizi">
                 <div>
-                    <h1 id="titolo-servizi-completa">I nostri <span>servizi</span></h1>
+                    <h1>I nostri <span class="testo-colorato">servizi</span></h1>
                     <p>Soluzioni complete e su misura per elevare il tuo brand nel panorama digitale. Dalla strategia alla
                         gestione operativa, abbiamo tutto ciò che serve.</p>
                 </div>
@@ -79,9 +91,9 @@
             </div>
         </section>
 
-        <section class="sezione-pacchetti" aria-labelledby="titolo-pacchetti">
+        <section class="sezione-pacchetti">
             <div class="intestazione-pacchetti">
-                <h2 id="titolo-pacchetti">Scegli il <span>pacchetto</span> giusto</h2>
+                <h2>Scegli il <span class="testo-colorato">pacchetto</span> giusto</h2>
                 <p>Tre opzioni pensate per supportare la crescita del tuo brand in ogni fase.</p>
             </div>
 
@@ -126,7 +138,6 @@
                 </div>
 
                 <div class="card-pacchetto card-pacchetto-premium">
-                    <div class="badge-consigliato">Più scelto</div>
                     <div class="intestazione-pacchetto">
                         <h3>Premium</h3>
                         <p class="prezzo">Lorem ipsum</p>
@@ -206,9 +217,9 @@
             </div>
         </section>
 
-        <section class="sezione-cta" id="cta" aria-labelledby="titolo-cta">
+        <section class="sezione-cta">
             <div class="contenitore-cta">
-                <h2 id="titolo-cta">Pronto a trasformare il tuo brand?</h2>
+                <h2>Pronto a trasformare il tuo brand?</h2>
                 <p>Scopri come i nostri servizi possono fare la differenza. Prenota una consulenza gratuita con il nostro
                     team.</p>
                 <a class="bottone bottone-primario" href="form-contatti.html">Contattaci oggi</a>
@@ -227,6 +238,8 @@
         </ul>
         <p class="stato">Agency status: online</p>
     </footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>

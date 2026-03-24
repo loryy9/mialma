@@ -10,35 +10,47 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <header class="testata">
-        <nav class="barra-navigazione" aria-label="Navigazione principale">
-            <a href="index.html" class="marchio" aria-label="Mi Alma">
-                <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
-            </a>
-            <ul class="menu-principale">
-                <li><a class="link-menu" href="index.html">Home</a></li>
-                <li><a class="link-menu attivo" href="chi-siamo.html">Chi siamo</a></li>
-                <li><a class="link-menu" href="servizi.html">Servizi</a></li>
-                <li><a class="link-menu" href="influencer.html">Influencer</a></li>
-                <li><a class="link-menu" href="contatti.html">Contatti</a></li>
-            </ul>
-            <a class="bottone bottone-primario" href="form-contatti.html">Fissiamo una call</a>
+        <nav class="navbar navbar-expand-lg barra-navigazione">
+            <div class="container-fluid contenitore-navbar">
+                <a href="index.html" class="marchio navbar-brand">
+                    <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
+                </a>
+                <button class="navbar-toggler toggler-menu" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu-principale" aria-controls="menu-principale" aria-expanded="false"
+                    aria-label="Apri navigazione">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principale">
+                    <ul class="navbar-nav menu-principale mx-lg-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link link-menu" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu attivo" aria-current="page" href="chi-siamo.html">Chi siamo</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="servizi.html">Servizi</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="influencer.html">Influencer</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="contatti.html">Contatti</a></li>
+                    </ul>
+                    <a class="bottone bottone-primario bottone-nav mt-2 mt-lg-0" href="form-contatti.html">Fissiamo una call</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <div class="contenuto">
-        <section class="hero-chi-siamo" aria-labelledby="titolo-hero-chi">
+        <section class="hero-chi-siamo">
             <div class="contenuto-hero-chi">
                 <p class="sopracciglio">La nostra storia</p>
-                <h1 id="titolo-hero-chi">Come nasce Mi Alma</h1>
+                <h1>Come nasce <span class="testo-colorato">Mi Alma</span></h1>
             </div>
         </section>
 
-        <section class="testo-storia" aria-labelledby="titolo-storia">
+        <section class="testo-storia">
             <div class="contenitore-sezione">
                 <p>Mi Alma nasce dall'idea che ogni brand meriti una presenza digitale capace di emozionare e
                     convertire. Abbiamo costruito il nostro approccio unendo strategia, contenuti e performance in un
@@ -49,12 +61,12 @@
             </div>
         </section>
 
-        <section class="sezione-founder" aria-labelledby="titolo-founder">
+        <section class="sezione-founder">
             <div class="contenitore-sezione box-founder">
                 <img src="img/team.png" alt="Founder Mi Alma" class="foto-founder">
                 <div class="testo-founder">
                     <p class="ruolo-founder">Founder e CEO</p>
-                    <h2 id="titolo-founder">Gaia Zerbin</h2>
+                    <h2>Gaia Zerbin</h2>
                     <p>Guido Mi Alma con un approccio che unisce empatia, dati e direzione creativa. Credo in una
                         comunicazione autentica, capace di mettere in relazione persone e brand attraverso storie che
                         lasciano il segno.</p>
@@ -62,9 +74,9 @@
             </div>
         </section>
 
-        <section class="sezione-team" aria-labelledby="titolo-team">
+        <section class="sezione-team">
             <div class="contenitore-sezione">
-                <h2 id="titolo-team">Il team Mi Alma</h2>
+                <h2>Il <span class="testo-colorato">team</span> Mi Alma</h2>
                 <div class="griglia-team">
                     <div class="card-membro">
                         <img src="img/team.png" alt="Membro team Mi Alma" class="foto-membro">
@@ -100,23 +112,23 @@
             </div>
         </section>
 
-        <section class="sezione-brand" aria-labelledby="titolo-brand">
+        <section class="sezione-brand">
             <div class="contenitore-sezione">
-                <h2 id="titolo-brand">Alcune nostre collaborazioni</h2>
-                <div class="griglia-collaborazioni" aria-label="Brand partner">
-                    <div class="card-collaborazione"><img src="img/team.png" alt="Logo collaborazione 1"></div>
-                    <div class="card-collaborazione"><img src="img/team.png" alt="Logo collaborazione 2"></div>
-                    <div class="card-collaborazione"><img src="img/team.png" alt="Logo collaborazione 3"></div>
-                    <div class="card-collaborazione"><img src="img/team.png" alt="Logo collaborazione 4"></div>
-                    <div class="card-collaborazione"><img src="img/team.png" alt="Logo collaborazione 5"></div>
-                    <div class="card-collaborazione"><img src="img/team.png" alt="Logo collaborazione 6"></div>
+                <h2>Alcune nostre collaborazioni</h2>
+                <div class="griglia-collaborazioni">
+                    <div class="card-collaborazione"><img src="img/loghi/sephora.png" alt="Logo collaborazione 1"></div>
+                    <div class="card-collaborazione"><img src="img/loghi/wizzair.png" alt="Logo collaborazione 2"></div>
+                    <div class="card-collaborazione"><img src="img/loghi/monrepos.png" alt="Logo collaborazione 3"></div>
+                    <div class="card-collaborazione"><img src="img/loghi/ikea.png" alt="Logo collaborazione 4"></div>
+                    <div class="card-collaborazione"><img src="img/loghi/cocacola.png" alt="Logo collaborazione 5"></div>
+                    <div class="card-collaborazione"><img src="img/loghi/zara.png" alt="Logo collaborazione 6"></div>
                 </div>
             </div>
         </section>
 
-        <section class="sezione-cta" id="cta" aria-labelledby="titolo-cta">
+        <section class="sezione-cta">
             <div class="contenitore-cta">
-                <h2 id="titolo-cta">Pronto a scalare il tuo impatto?</h2>
+                <h2>Pronto a scalare il tuo impatto?</h2>
                 <p>Le opportunita digitali non aspettano. Prenota oggi una consulenza gratuita e scopri come possiamo
                     trasformare il tuo brand.</p>
                 <a class="bottone bottone-primario" href="form-contatti.html">Inizia il tuo viaggio</a>
@@ -135,6 +147,8 @@
         </ul>
         <p class="stato">Agency status: online</p>
     </footer>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>
