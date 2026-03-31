@@ -2,11 +2,9 @@
     --sfondo: #e9e7f0;
     --testo: #15172e;
     --testo-smorzato: #5f637f;
-    --viola: #f62188;
+    --fucsia: #f62188;
     --magenta: #ca1786;
-    --ciano: #35b8de;
-    --bordo-chiaro: rgba(255, 255, 255, 0.6);
-    --ombra-morbida: 0 18px 38px rgba(43, 39, 83, 0.14);
+    --giallo: #ffeb5b;
 }
 
 * {
@@ -101,7 +99,7 @@ a {
 
 .marchio {
     font-weight: 700;
-    color: var(--viola);
+    color: var(--fucsia);
     display: inline-flex;
     align-items: center;
     margin-right: 0;
@@ -137,8 +135,8 @@ a {
 
 .link-menu:hover,
 .link-menu.attivo {
-    color: var(--viola);
-    border-bottom-color: var(--viola);
+    color: var(--fucsia);
+    border-bottom-color: var(--fucsia);
 }
 
 .toggler-menu {
@@ -198,7 +196,7 @@ a {
 }
 
 .contenitore-cta {
-    background: #ffeb5b;
+    background: var(--giallo);
     border-radius: 28px;
     text-align: center;
     padding: 56px 22px;
@@ -364,7 +362,7 @@ a {
 }
 
 .card-neutra {
-    background: #cecece;
+    background: #f1c7dba8;
 }
 
 .card-rosa {
@@ -374,6 +372,26 @@ a {
 
 .card-rosa p {
     color: #f6f8ff;
+}
+
+/* Video banner */
+
+.sezione-video-banner {
+    margin: 85px 0;
+    overflow: hidden;
+    box-shadow: var(--ombra-morbida);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-banner {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 28px;
+    margin-top: 10px;
 }
 
 /* Chi siamo */
@@ -471,7 +489,7 @@ a {
 
 .ruolo-founder {
     font-weight: 800;
-    color: #ffeb5b;
+    color: var(--giallo);
 }
 
 .sezione-team {
@@ -630,7 +648,7 @@ a {
 
 .campo-form label {
     font-weight: 700;
-    color: #ffeb5b;
+    color: var(--giallo);
 }
 
 .campo-form input,
@@ -678,7 +696,7 @@ a {
 }
 
 .azioni-form small {
-    color: #ffeb5b;
+    color: var(--giallo);
     font-weight: 600;
 }
 
@@ -723,7 +741,7 @@ a {
 }
 
 .card-contatto h3 {
-    color: var(--viola);
+    color: var(--fucsia);
     margin-bottom: 12px;
 }
 
@@ -735,7 +753,7 @@ a {
 }
 
 .card-contatto a:hover {
-    color: var(--viola);
+    color: var(--fucsia);
 }
 
 .card-contatto p {
@@ -774,8 +792,8 @@ a {
 
 .social-contatti a:hover {
     color: #ffffff;
-    background: var(--viola);
-    border-color: var(--viola);
+    background: var(--fucsia);
+    border-color: var(--fucsia);
     transform: translateY(-1px);
 }
 
@@ -802,7 +820,7 @@ a {
 
 .sezione-orari h2 {
     margin-bottom: 22px;
-    color: var(--viola);
+    color: var(--fucsia);
 }
 
 .tabella-orari {
@@ -828,7 +846,7 @@ a {
 
 .tabella-orari td:first-child {
     font-weight: 700;
-    color: var(--viola);
+    color: var(--fucsia);
     width: 50%;
 }
 
@@ -934,13 +952,8 @@ a {
 
 .intestazione-pacchetto .prezzo {
     margin-top: 8px;
-    color: var(--viola);
+    color: var(--fucsia);
     font-weight: 700;
-}
-
-.descrizione-pacchetto {
-    margin: 14px 0 24px;
-    color: var(--testo-smorzato);
 }
 
 .tabella-servizi {
@@ -1034,7 +1047,7 @@ a {
 
 .nickname {
     margin-top: 5px;
-    color: var(--viola);
+    color: var(--fucsia);
     font-weight: 700;
 }
 
@@ -1052,8 +1065,7 @@ a {
 }
 
 .specializzazione {
-    background: #ffec5b;
-    border: 1px solid #ffeb5b;
+    background: var(--giallo);
     border-radius: 999px;
     padding: 7px 11px;
     font-weight: 700;
@@ -1161,7 +1173,7 @@ a {
 }
 
 .footer-menu a:hover {
-    color: var(--viola);
+    color: var(--fucsia);
 }
 
 .footer-social {
@@ -1188,8 +1200,8 @@ a {
 
 .footer-social a:hover {
     color: #ffffff;
-    background: var(--viola);
-    border-color: var(--viola);
+    background: var(--fucsia);
+    border-color: var(--fucsia);
     transform: translateY(-1px);
 }
 
