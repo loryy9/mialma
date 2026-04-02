@@ -1118,7 +1118,7 @@ a {
 
 /* Footer */
 
-.piede-di-pagina {
+.footer {
     width: 94vw;
     max-width: 1140px;
     margin: 0 auto 26px;
@@ -1347,7 +1347,7 @@ a {
         padding: 14px 12px;
     }
 
-    .piede-di-pagina {
+    .footer {
         text-align: center;
         gap: 16px;
     }
