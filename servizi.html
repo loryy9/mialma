@@ -4,108 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servizi - Mi Alma</title>
+    <title>Servizi | Mi Alma</title>
+    <meta name="description" content="Strategia social, produzione contenuti, editing e piano editoriale: scopri i servizi Mi Alma.">
+    <meta name="author" content="Mi Alma">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Servizi | Mi Alma">
+    <meta property="og:description" content="Soluzioni digitali su misura per rendere il tuo brand più riconoscibile e rilevante.">
+    <meta property="og:image" content="img/carosello/img2.jpg">
+    <meta property="og:locale" content="it_IT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Servizi | Mi Alma">
+    <meta name="twitter:description" content="Scopri i servizi digitali Mi Alma.">
+    <meta name="twitter:image" content="img/carosello/img2.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
     <header class="testata">
-        <nav class="navbar navbar-expand-lg barra-navigazione">
-            <div class="container-fluid contenitore-navbar">
-                <a href="index.html" class="marchio navbar-brand">
+        <nav class="barra-navigazione" aria-label="Navigazione principale">
+            <div class="contenitore-navbar">
+                <a href="index.html" class="marchio" aria-label="Mi Alma">
                     <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
                 </a>
-                <button class="navbar-toggler toggler-menu" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#menu-principale" aria-controls="menu-principale" aria-expanded="false"
+                <button class="toggler-menu" type="button" aria-controls="menu-principale" aria-expanded="false"
                     aria-label="Apri navigazione">
-                    <span class="navbar-toggler-icon"></span>
+                    <span aria-hidden="true">+</span>
                 </button>
-                <div class="collapse navbar-collapse" id="menu-principale">
-                    <ul class="navbar-nav menu-principale mx-lg-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link link-menu" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link link-menu" href="chi-siamo.html">Chi siamo</a></li>
-                        <li class="nav-item"><a class="nav-link link-menu attivo" aria-current="page"
-                                href="servizi.html">Servizi</a></li>
-                        <li class="nav-item"><a class="nav-link link-menu" href="influencer.html">Influencer</a></li>
-                        <li class="nav-item"><a class="nav-link link-menu" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link link-menu" href="contatti.html">Contatti</a></li>
+                <div class="menu-principale" id="menu-principale">
+                    <ul>
+                        <li><a class="link-menu" href="index.html">Home</a></li>
+                        <li><a class="link-menu attivo" aria-current="page" href="servizi.html">Servizi</a></li>
+                        <li><a class="link-menu" href="portfolio.html">Portfolio</a></li>
+                        <li><a class="link-menu" href="contatti.html">Contatti</a></li>
                     </ul>
-                    <a class="bottone bottone-primario bottone-nav mt-2 mt-lg-0" href="form-contatti.html">Fissiamo una
-                        call</a>
+                    <a class="bottone bottone-primario bottone-nav" href="contatti.html">Fissiamo una call</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <div class="contenuto">
-        <section class="sezione-servizi-completa">
-            <div class="intestazione-servizi">
-                <div>
-                    <h1>I nostri <span class="testo-colorato">servizi</span></h1>
-                    <p>Seguiamo ogni fase del tuo percorso digitale: dalla definizione
-                        della strategia alla produzione e pubblicazione dei contenuti.
-                    </p>
-                </div>
+        <section class="intestazione-pagina entrata-hero">
+            <span class="sopracciglio">I nostri servizi</span>
+            <h1>Un ecosistema creativo<br>per il tuo <span class="testo-colorato">brand</span>.</h1>
+            <p>Dalla strategia alla pubblicazione: ci occupiamo di ogni fase, con metodo e coerenza.</p>
+        </section>
+
+        <section class="servizi-orbita" aria-labelledby="titolo-servizi-orbita">
+            <div class="servizi-orbita-heading">
+                <span class="sopracciglio-servizi">What we do</span>
+                <p>Un ecosistema creativo per trasformare una buona idea in una presenza impossibile da ignorare.</p>
             </div>
-
-            <div class="griglia-servizi-completa">
-                <div class="card-servizio-uniforme card-servizio-1">
-                    <h3>Strategia Social su Misura</h3>
-                    <p>Analizziamo il tuo mercato di riferimento, i competitor e i comportamenti del tuo target per
-                        costruire una strategia social efficace, coerente e orientata ai risultati.</p>
-
-                </div>
-
-                <div class="card-servizio-uniforme card-servizio-2">
-                    <h3>Produzione dei Contenuti</h3>
-                    <p>Ci occupiamo della registrazione dei contenuti, curando ogni dettaglio per valorizzare al meglio
-                        la tua immagine e comunicare in modo autentico.</p>
-                </div>
-
-                <div class="card-servizio-uniforme card-servizio-3">
-                    <h3>Editing, Post-Produzione e Pubblicazione</h3>
-                    <p>Valorizziamo il girato con editing e post-produzione professionali, poi pianifichiamo e
-                        pubblichiamo i contenuti con un piano editoriale strategico, costante e coerente.</p>
-                </div>
-
-                <div class="card-servizio-uniforme card-servizio-4">
-                    <h3>Copywriting Strategico</h3>
-                    <p>Realizziamo testi chiari, efficaci e ottimizzati, studiati per comunicare il valore del tuo brand
-                        e
-                        coinvolgere il tuo pubblico in modo autentico.</p>
-                </div>
-
-                <div class="card-servizio-uniforme card-servizio-5">
-                    <h3>Influencer Marketing e Talent Management</h3>
-                    <p>Mettiamo a disposizione una rete di influencer selezionati e gestiamo l’intero processo di
-                        collaborazione, dalla scelta dei profili alla coordinazione operativa tramite talent manager.
-                    </p>
-                </div>
-
-                <div class="card-servizio-uniforme card-servizio-6">
-                    <h3>Graphic Design e Materiali di Branding</h3>
-                    <p>Progettiamo grafiche personalizzate e coerenti con la tua identità visiva, sia per i canali
-                        digitali
-                        che per tutti i materiali offline, come flyer, biglietti da visita e supporti promozionali.</p>
-                </div>
+            <div class="orbita-servizi">
+                <div class="bolla-servizi bolla-centro" id="titolo-servizi-orbita"><span>I nostri</span><strong>servizi</strong><small>explore ↗</small></div>
+                <a class="bolla-servizi bolla-1" href="#pacchetti"><span>01</span><strong>Strategia<br>social</strong><small>scopri ↗</small></a>
+                <a class="bolla-servizi bolla-2" href="#pacchetti"><span>02</span><strong>Content<br>production</strong><small>scopri ↗</small></a>
+                <a class="bolla-servizi bolla-3" href="#pacchetti"><span>03</span><strong>Editing &<br>motion</strong><small>scopri ↗</small></a>
+                <a class="bolla-servizi bolla-4" href="#pacchetti"><span>04</span><strong>Piano<br>editoriale</strong><small>scopri ↗</small></a>
+                <a class="bolla-servizi bolla-5" href="#pacchetti"><span>05</span><strong>Copywriting<br>strategico</strong><small>scopri ↗</small></a>
+                <a class="bolla-servizi bolla-6" href="#pacchetti"><span>06</span><strong>Brand<br>design</strong><small>scopri ↗</small></a>
             </div>
         </section>
 
-        <section class="sezione-pacchetti">
+        <section class="sezione-pacchetti reveal-on-scroll" id="pacchetti">
             <div class="intestazione-pacchetti">
                 <h2>Scegli il tuo <span class="testo-colorato">pacchetto</span></h2>
-                <p>Tre soluzioni per orientarti nella scelta, ma ogni strategia viene adattata e
-                    costruita su misura per il tuo business.
-                </p>
+                <p>Tre soluzioni per orientarti nella scelta, ogni strategia viene poi adattata al tuo business.</p>
             </div>
 
             <div class="griglia-pacchetti">
@@ -113,39 +83,18 @@
                     <div class="intestazione-pacchetto">
                         <h3>Base</h3>
                         <p class="prezzo">€150</p>
-                    </div>              
-                
+                    </div>
                     <table class="tabella-servizi" role="presentation">
                         <tbody>
-                            <tr>
-                                <td>Strategia personalizzata</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Piano editoriale</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Creazione contenuti base</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Copywriting</td>
-                                <td class="cross">✗</td>
-                            </tr>
-                            <tr>
-                                <td>Pubblicazione, gestione e supporto</td>
-                                <td class="cross">✗</td>
-                            </tr>
-                            <tr>
-                                <td>Analisi avanzata e ottimizzazione</td>
-                                <td class="cross">✗</td>
-                            </tr>
+                            <tr><td>Strategia personalizzata</td><td class="check">✓</td></tr>
+                            <tr><td>Piano editoriale</td><td class="check">✓</td></tr>
+                            <tr><td>Creazione contenuti base</td><td class="check">✓</td></tr>
+                            <tr><td>Copywriting</td><td class="cross">✗</td></tr>
+                            <tr><td>Pubblicazione e supporto</td><td class="cross">✗</td></tr>
+                            <tr><td>Analisi avanzata</td><td class="cross">✗</td></tr>
                         </tbody>
                     </table>
-
-                    <a class="bottone bottone-primario bottone-pacchetto" href="form-contatti.html">Scegli questo
-                        pacchetto</a>
+                    <a class="bottone bottone-primario bottone-pacchetto" href="contatti.html">Scegli questo pacchetto</a>
                 </div>
 
                 <div class="card-pacchetto card-pacchetto-premium">
@@ -153,38 +102,17 @@
                         <h3>Premium</h3>
                         <p class="prezzo">€350</p>
                     </div>
-                    
                     <table class="tabella-servizi" role="presentation">
                         <tbody>
-                            <tr>
-                                <td>Strategia personalizzata</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Piano editoriale avanzato</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Creazione contenuti (post + video)</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Copywriting avanzato</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Pubblicazione, gestione e supporto </td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Analisi avanzata e ottimizzazione</td>
-                                <td class="cross">✗</td>
-                            </tr>
+                            <tr><td>Strategia personalizzata</td><td class="check">✓</td></tr>
+                            <tr><td>Piano editoriale avanzato</td><td class="check">✓</td></tr>
+                            <tr><td>Contenuti (post + video)</td><td class="check">✓</td></tr>
+                            <tr><td>Copywriting avanzato</td><td class="check">✓</td></tr>
+                            <tr><td>Pubblicazione e supporto</td><td class="check">✓</td></tr>
+                            <tr><td>Analisi avanzata</td><td class="cross">✗</td></tr>
                         </tbody>
                     </table>
-
-                    <a class="bottone bottone-primario bottone-pacchetto" href="form-contatti.html">Scegli questo
-                        pacchetto</a>
+                    <a class="bottone bottone-primario bottone-pacchetto" href="contatti.html">Scegli questo pacchetto</a>
                 </div>
 
                 <div class="card-pacchetto card-pacchetto-gold">
@@ -192,48 +120,27 @@
                         <h3>Gold</h3>
                         <p class="prezzo">€500</p>
                     </div>
-
                     <table class="tabella-servizi" role="presentation">
                         <tbody>
-                            <tr>
-                                <td>Strategia completa e su misura</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Piano editoriale completo</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Creazione contenuti avanzata</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Copywriting professionale</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Pubblicazione, gestione e supporto</td>
-                                <td class="check">✓</td>
-                            </tr>
-                            <tr>
-                                <td>Analisi dati e ottimizzazione continua</td>
-                                <td class="check">✓</td>
-                            </tr>
+                            <tr><td>Strategia completa su misura</td><td class="check">✓</td></tr>
+                            <tr><td>Piano editoriale completo</td><td class="check">✓</td></tr>
+                            <tr><td>Contenuti avanzati</td><td class="check">✓</td></tr>
+                            <tr><td>Copywriting professionale</td><td class="check">✓</td></tr>
+                            <tr><td>Pubblicazione e supporto</td><td class="check">✓</td></tr>
+                            <tr><td>Analisi e ottimizzazione continua</td><td class="check">✓</td></tr>
                         </tbody>
                     </table>
-
-                    <a class="bottone bottone-primario bottone-pacchetto" href="form-contatti.html">Scegli questo
-                        pacchetto</a>
+                    <a class="bottone bottone-primario bottone-pacchetto" href="contatti.html">Scegli questo pacchetto</a>
                 </div>
             </div>
         </section>
 
-        <section class="sezione-cta">
+        <section class="sezione-cta reveal-on-scroll">
             <div class="contenitore-cta">
                 <h2>Ci stai ancora pensando</h2>
-                <p>Il momento giusto non arriva: si crea. Prenota oggi la tua consulenza gratuita!</p>
-                <a class="bottone bottone-primario" href="form-contatti.html">Fissiamo una call</a>
-                <small>Nessun impegno richiesto - Analisi iniziale gratuita</small>
+                <p>Il momento giusto non arriva: si crea. Prenota oggi la tua consulenza gratuita.</p>
+                <a class="bottone bottone-primario" href="contatti.html">Fissiamo una call</a>
+                <small>Nessun impegno richiesto — Analisi iniziale gratuita</small>
             </div>
         </section>
     </div>
@@ -246,26 +153,19 @@
         <nav class="footer-riga footer-riga-menu">
             <ul class="footer-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="chi-siamo.html">Chi siamo</a></li>
                 <li><a href="servizi.html">Servizi</a></li>
-                <li><a href="influencer.html">Influencer</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
         </nav>
         <ul class="footer-riga footer-social">
-            <li><a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"
-                        aria-hidden="true"></i></a></li>
-            <li><a href="https://it.linkedin.com/" target="_blank"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-            </li>
-            <li><a href="https://www.tiktok.com/" target="_blank"><i class="bi bi-tiktok" aria-hidden="true"></i></a>
-            </li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://it.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
         </ul>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>

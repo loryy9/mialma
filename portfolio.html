@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Mi Alma</title>
+    <meta name="description" content="I brand con cui Mi Alma collabora o ha collaborato: scopri il nostro portfolio.">
+    <meta name="author" content="Mi Alma">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio | Mi Alma">
+    <meta property="og:description" content="I brand con cui collaboriamo.">
+    <meta property="og:image" content="img/loghi/zara.png">
+    <meta property="og:locale" content="it_IT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio | Mi Alma">
+    <meta name="twitter:description" content="I brand con cui collaboriamo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="testata">
+        <nav class="barra-navigazione" aria-label="Navigazione principale">
+            <div class="contenitore-navbar">
+                <a href="index.html" class="marchio" aria-label="Mi Alma">
+                    <img src="img/logo_rosa.png" alt="Mi Alma" class="logo-marchio">
+                </a>
+                <button class="toggler-menu" type="button" aria-controls="menu-principale" aria-expanded="false"
+                    aria-label="Apri navigazione">
+                    <span aria-hidden="true">+</span>
+                </button>
+                <div class="menu-principale" id="menu-principale">
+                    <ul>
+                        <li><a class="link-menu" href="index.html">Home</a></li>
+                        <li><a class="link-menu" href="servizi.html">Servizi</a></li>
+                        <li><a class="link-menu attivo" aria-current="page" href="portfolio.html">Portfolio</a></li>
+                        <li><a class="link-menu" href="contatti.html">Contatti</a></li>
+                    </ul>
+                    <a class="bottone bottone-primario bottone-nav" href="contatti.html">Fissiamo una call</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contenuto">
+        <section class="intestazione-pagina entrata-hero">
+            <span class="sopracciglio">Portfolio</span>
+            <h1>Brand che ci hanno<br><span class="testo-colorato">scelto</span>.</h1>
+            <p>Alcune delle collaborazioni attive e passate di Mi Alma. Clicca un brand per seguirlo sui social.</p>
+        </section>
+
+        <div class="filtri-portfolio reveal-on-scroll" role="group" aria-label="Filtra collaborazioni">
+            <button class="filtro-pill attivo" type="button" data-filtro="tutte">Tutte</button>
+            <button class="filtro-pill" type="button" data-filtro="attiva">Attive</button>
+            <button class="filtro-pill" type="button" data-filtro="passata">Passate</button>
+        </div>
+
+        <section class="griglia-portfolio reveal-on-scroll" aria-label="Brand in collaborazione">
+            <div class="card-brand" data-num="01" data-dettaglio="Collaborazione dal 2023 — content &amp; social" data-stato="attiva">
+                <img class="card-brand-logo" src="img/loghi/cocacola.png" alt="Coca-Cola" loading="lazy">
+                <span class="card-brand-nome">Coca-Cola</span>
+                <span class="card-brand-tag">Collaborazione attiva</span>
+                <div class="card-brand-social">
+                    <a href="#" target="_blank" rel="noopener" aria-label="Instagram Coca-Cola">IG</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="TikTok Coca-Cola">TT</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook Coca-Cola">FB</a>
+                </div>
+            </div>
+            <div class="card-brand" data-num="02" data-dettaglio="Collaborazione dal 2024 — campagne stagionali" data-stato="attiva">
+                <img class="card-brand-logo" src="img/loghi/zara.png" alt="Zara" loading="lazy">
+                <span class="card-brand-nome">Zara</span>
+                <span class="card-brand-tag">Collaborazione attiva</span>
+                <div class="card-brand-social">
+                    <a href="#" target="_blank" rel="noopener" aria-label="Instagram Zara">IG</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="TikTok Zara">TT</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook Zara">FB</a>
+                </div>
+            </div>
+            <div class="card-brand" data-num="03" data-dettaglio="Collaborazione dal 2023 — influencer marketing" data-stato="attiva">
+                <img class="card-brand-logo" src="img/loghi/sephora.png" alt="Sephora" loading="lazy">
+                <span class="card-brand-nome">Sephora</span>
+                <span class="card-brand-tag">Collaborazione attiva</span>
+                <div class="card-brand-social">
+                    <a href="#" target="_blank" rel="noopener" aria-label="Instagram Sephora">IG</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="TikTok Sephora">TT</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook Sephora">FB</a>
+                </div>
+            </div>
+            <div class="card-brand" data-num="04" data-dettaglio="Progetto 2022 — lancio prodotto" data-stato="passata">
+                <img class="card-brand-logo" src="img/loghi/ikea.png" alt="Ikea" loading="lazy">
+                <span class="card-brand-nome">Ikea</span>
+                <span class="card-brand-tag">Collaborazione passata</span>
+                <div class="card-brand-social">
+                    <a href="#" target="_blank" rel="noopener" aria-label="Instagram Ikea">IG</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="TikTok Ikea">TT</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook Ikea">FB</a>
+                </div>
+            </div>
+            <div class="card-brand" data-num="05" data-dettaglio="Progetto 2023 — brand awareness" data-stato="passata">
+                <img class="card-brand-logo" src="img/loghi/wizzair.png" alt="Wizz Air" loading="lazy">
+                <span class="card-brand-nome">Wizz Air</span>
+                <span class="card-brand-tag">Collaborazione passata</span>
+                <div class="card-brand-social">
+                    <a href="#" target="_blank" rel="noopener" aria-label="Instagram Wizz Air">IG</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="TikTok Wizz Air">TT</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook Wizz Air">FB</a>
+                </div>
+            </div>
+            <div class="card-brand" data-num="06" data-dettaglio="Collaborazione dal 2024 — piano editoriale" data-stato="attiva">
+                <img class="card-brand-logo" src="img/loghi/monrepos.png" alt="Mon Repos" loading="lazy">
+                <span class="card-brand-nome">Mon Repos</span>
+                <span class="card-brand-tag">Collaborazione attiva</span>
+                <div class="card-brand-social">
+                    <a href="#" target="_blank" rel="noopener" aria-label="Instagram Mon Repos">IG</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="TikTok Mon Repos">TT</a>
+                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook Mon Repos">FB</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sezione-cta reveal-on-scroll">
+            <div class="contenitore-cta">
+                <h2>Il prossimo brand sei tu?</h2>
+                <p>Raccontaci il tuo progetto: costruiamo insieme la tua prossima collaborazione.</p>
+                <a class="bottone bottone-primario" href="contatti.html">Fissiamo una call</a>
+                <small>Nessun impegno richiesto — Analisi iniziale gratuita</small>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-riga footer-riga-top">
+            <p class="footer-brand">&copy; 2026 Mi Alma</p>
+            <p class="stato">Tutti i diritti riservati.</p>
+        </div>
+        <nav class="footer-riga footer-riga-menu">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servizi.html">Servizi</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+        <ul class="footer-riga footer-social">
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://it.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>
