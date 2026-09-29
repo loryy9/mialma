@@ -3,18 +3,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const pulsanteMenu = document.querySelector(".toggler-menu");
     const menu = document.querySelector("#menu-principale");
+    const sfondoMenu = document.querySelector("[data-sfondo-menu]");
+    const pulsanteChiudi = document.querySelector(".chiudi-menu");
 
     if (pulsanteMenu && menu) {
+        const chiudiMenu = () => {
+            menu.classList.remove("menu-aperto");
+            sfondoMenu?.classList.remove("visibile");
+            document.body.classList.remove("menu-bloccato");
+            pulsanteMenu.setAttribute("aria-expanded", "false");
+        };
+
+        const apriMenu = () => {
+            menu.classList.add("menu-aperto");
+            sfondoMenu?.classList.add("visibile");
+            document.body.classList.add("menu-bloccato");
+            pulsanteMenu.setAttribute("aria-expanded", "true");
+        };
+
         pulsanteMenu.addEventListener("click", () => {
-            const aperto = menu.classList.toggle("menu-aperto");
-            pulsanteMenu.setAttribute("aria-expanded", String(aperto));
+            menu.classList.contains("menu-aperto") ? chiudiMenu() : apriMenu();
+        });
+
+        pulsanteChiudi?.addEventListener("click", chiudiMenu);
+        sfondoMenu?.addEventListener("click", chiudiMenu);
+
+        document.addEventListener("keydown", (evento) => {
+            if (evento.key === "Escape") chiudiMenu();
         });
 
         menu.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", () => {
-                menu.classList.remove("menu-aperto");
-                pulsanteMenu.setAttribute("aria-expanded", "false");
-            });
+            link.addEventListener("click", chiudiMenu);
         });
     }
 
@@ -90,6 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }, { threshold: 0.5 });
         contatori.forEach((elemento) => osservatoreContatori.observe(elemento));
+    }
+
+    const carosellopacchetti = document.querySelector(".griglia-pacchetti");
+    const pacchettoPremium = carosellopacchetti?.querySelector(".card-pacchetto-premium");
+    if (carosellopacchetti && pacchettoPremium && window.matchMedia("(max-width: 900px)").matches) {
+        carosellopacchetti.scrollLeft = pacchettoPremium.offsetLeft - (carosellopacchetti.clientWidth - pacchettoPremium.clientWidth) / 2;
     }
 
     const passiRacconto = [...document.querySelectorAll(".racconto-step")];
