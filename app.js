@@ -5,17 +5,15 @@
 
   var head = document.getElementById('site-head');
 
-  // Sticky header. Inner pages: hairline once you scroll.
-  // Home: transparent over the hero video, white bar once the hero is behind you.
+  // Sticky header: as soon as the page scrolls it turns into the white floating pill.
+  // On the home it starts transparent over the video and turns white right away (no late jump).
   if (head) {
     var over = head.classList.contains('site-head--over');
-    var hero = document.querySelector('.hero');
     var headBtn = head.querySelector('.head-cta');
     var ticking = false;
     var syncHead = function () {
       ticking = false;
-      var limit = over && hero ? hero.offsetHeight - head.offsetHeight - 24 : 4;
-      var scrolled = window.scrollY > limit;
+      var scrolled = window.scrollY > 8;
       head.classList.toggle('is-scrolled', scrolled);
       if (over) {
         head.classList.toggle('site-head--light', scrolled);
@@ -35,14 +33,14 @@
   // Mobile menu
   var menuBtn = head && head.querySelector('.menu-btn');
   if (menuBtn) {
-    var close = function () {
-      head.classList.remove('is-open');
-      menuBtn.setAttribute('aria-expanded', 'false');
-    };
-    menuBtn.addEventListener('click', function () {
-      var open = head.classList.toggle('is-open');
+    var setOpen = function (open) {
+      head.classList.toggle('is-open', open);
       menuBtn.setAttribute('aria-expanded', String(open));
-    });
+      menuBtn.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
+    };
+    var close = function () { setOpen(false); };
+    menuBtn.addEventListener('click', function () { setOpen(!head.classList.contains('is-open')); });
+    head.querySelectorAll('.nav a').forEach(function (a) { a.addEventListener('click', close); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && head.classList.contains('is-open')) { close(); menuBtn.focus(); }
     });
@@ -113,7 +111,8 @@
     if (!track || reduce) return;
     var SPEED = 0.035;          // px per ms (~35px/s)
     var RESUME_AFTER = 1800;    // ms of inactivity before auto-scroll restarts
-    var pos = 0, last = null, hold = false, hover = false, resumeT;
+    var DIR = Number(strip.getAttribute('data-dir')) || 1;   // 1: right to left, -1: left to right
+    var pos = null, last = null, hold = false, hover = false, resumeT;
 
     function loopWidth() { return track.offsetWidth; }
     function wrap() {
@@ -127,10 +126,12 @@
       resumeT = setTimeout(function () { hold = false; pos = strip.scrollLeft; }, RESUME_AFTER);
     }
     function tick(t) {
-      if (last !== null && !hold && !hover) {
-        pos += (t - last) * SPEED;
-        var w = loopWidth();
+      var w = loopWidth();
+      if (w > 0 && last !== null && !hold && !hover) {   // w is 0 while the strip is hidden
+        if (pos === null) pos = DIR > 0 ? 0 : w;          // left-to-right rows start mid-loop
+        pos += DIR * (t - last) * SPEED;
         if (pos >= w) pos -= w;
+        else if (pos <= 0) pos += w;
         strip.scrollLeft = pos;
       }
       last = t;
@@ -176,6 +177,41 @@
     strip.addEventListener('focusout', resumeLater);
 
     window.requestAnimationFrame(tick);
+  });
+
+  // Roadmap ("Come lavoriamo"): stops light up one after the other
+  // the first time the section comes into view.
+  document.querySelectorAll('[data-roadmap]').forEach(function (road) {
+    if (reduce || !('IntersectionObserver' in window)) return;
+    road.classList.add('is-armed');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { road.classList.add('is-on'); io.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    io.observe(road);
+  });
+
+  // Hero typewriter: types a phrase, holds it, deletes it, moves to the next one
+  document.querySelectorAll('[data-typewriter]').forEach(function (el) {
+    var phrases;
+    try { phrases = JSON.parse(el.getAttribute('data-typewriter')); } catch (e) { return; }
+    if (reduce || !phrases || phrases.length < 2) return;   // reduced motion: keep the first phrase, still
+    var TYPE = 55, DELETE = 28, HOLD = 2300, GAP = 380;
+    var i = 0, text = phrases[0];
+    function write(t) { el.textContent = t; }
+    function erase() {
+      el.classList.add('is-typing');
+      if (text.length) { text = text.slice(0, -1); write(text); setTimeout(erase, DELETE); }
+      else { i = (i + 1) % phrases.length; setTimeout(type, GAP); }
+    }
+    function type() {
+      var target = phrases[i];
+      el.classList.add('is-typing');
+      if (text.length < target.length) { text = target.slice(0, text.length + 1); write(text); setTimeout(type, TYPE); }
+      else { el.classList.remove('is-typing'); setTimeout(erase, HOLD); }
+    }
+    setTimeout(erase, HOLD + 900);   // let the first phrase be read before it changes
   });
 
   // Respect reduced motion for background videos
