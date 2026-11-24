@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<style>.m{fill:#000}@media (prefers-color-scheme: dark){.m{fill:#fff}}</style>
+<defs><mask id="k" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/><path d="M50.000 5.518 56.169 24.222 74.873 30.391 56.169 36.559 50.000 55.264 43.831 36.559 25.127 30.391 43.831 24.222Z" fill="#000" stroke="#000" stroke-width="5.97" stroke-linejoin="miter"/></mask></defs>
+<path class="m" mask="url(#k)" transform="matrix(84.0,0,0,-84.0,12.788,96.0)" d="M.06500244 .68800356H.272995L.44500733 .3540039 .6130066 .68800356H.82099917V0H.6130066V.3670044L.48599244 .1269989H.40100099L.272995 .3670044V0H.06500244V.68800356Z"/>
+<path d="M50.000 5.518 56.169 24.222 74.873 30.391 56.169 36.559 50.000 55.264 43.831 36.559 25.127 30.391 43.831 24.222Z" fill="#ff3392"/>
+</svg>

@@ -3,8 +3,36 @@
   var WA_NUMBER = '393518279049';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Mobile menu
   var head = document.getElementById('site-head');
+
+  // Sticky header. Inner pages: hairline once you scroll.
+  // Home: transparent over the hero video, white bar once the hero is behind you.
+  if (head) {
+    var over = head.classList.contains('site-head--over');
+    var hero = document.querySelector('.hero');
+    var headBtn = head.querySelector('.head-cta');
+    var ticking = false;
+    var syncHead = function () {
+      ticking = false;
+      var limit = over && hero ? hero.offsetHeight - head.offsetHeight - 24 : 4;
+      var scrolled = window.scrollY > limit;
+      head.classList.toggle('is-scrolled', scrolled);
+      if (over) {
+        head.classList.toggle('site-head--light', scrolled);
+        if (headBtn) {
+          headBtn.classList.toggle('btn--light', !scrolled);
+          headBtn.classList.toggle('btn--dark', scrolled);
+        }
+      }
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(syncHead); }
+    }, { passive: true });
+    window.addEventListener('resize', syncHead);
+    syncHead();
+  }
+
+  // Mobile menu
   var menuBtn = head && head.querySelector('.menu-btn');
   if (menuBtn) {
     var close = function () {
@@ -75,6 +103,79 @@
     rail.addEventListener('scroll', function () { window.requestAnimationFrame(update); }, { passive: true });
     window.addEventListener('resize', update);
     update();
+  });
+
+  // Clients strip: scrolls by itself in a loop, but can be swiped (touch),
+  // dragged (mouse) or scrolled (trackpad) at any time. Auto-scroll resumes
+  // a moment after the visitor lets go.
+  document.querySelectorAll('[data-marquee]').forEach(function (strip) {
+    var track = strip.querySelector('.marquee__track');
+    if (!track || reduce) return;
+    var SPEED = 0.035;          // px per ms (~35px/s)
+    var RESUME_AFTER = 1800;    // ms of inactivity before auto-scroll restarts
+    var pos = 0, last = null, hold = false, hover = false, resumeT;
+
+    function loopWidth() { return track.offsetWidth; }
+    function wrap() {
+      var w = loopWidth();
+      if (strip.scrollLeft >= w) strip.scrollLeft -= w;
+      else if (strip.scrollLeft <= 0) strip.scrollLeft += w;
+    }
+    function pause() { hold = true; clearTimeout(resumeT); }
+    function resumeLater() {
+      clearTimeout(resumeT);
+      resumeT = setTimeout(function () { hold = false; pos = strip.scrollLeft; }, RESUME_AFTER);
+    }
+    function tick(t) {
+      if (last !== null && !hold && !hover) {
+        pos += (t - last) * SPEED;
+        var w = loopWidth();
+        if (pos >= w) pos -= w;
+        strip.scrollLeft = pos;
+      }
+      last = t;
+      window.requestAnimationFrame(tick);
+    }
+
+    // Keep the loop seamless when the visitor scrolls past either end
+    strip.addEventListener('scroll', function () { if (hold) wrap(); }, { passive: true });
+
+    // Touch and trackpad: native scrolling, we just step aside
+    strip.addEventListener('touchstart', pause, { passive: true });
+    strip.addEventListener('touchend', resumeLater, { passive: true });
+    strip.addEventListener('wheel', function () { pause(); resumeLater(); }, { passive: true });
+
+    // Desktop: pause on hover, drag with the mouse
+    strip.addEventListener('mouseenter', function () { hover = true; });
+    strip.addEventListener('mouseleave', function () { hover = false; pos = strip.scrollLeft; });
+    var startX = 0, startScroll = 0, dragging = false, moved = false;
+    strip.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      dragging = true; moved = false; startX = e.clientX; startScroll = strip.scrollLeft;
+      pause();
+    });
+    window.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > 4) { moved = true; strip.classList.add('is-dragging'); }
+      strip.scrollLeft = startScroll - dx;
+      wrap();
+      if (strip.scrollLeft !== startScroll - dx) { startScroll = strip.scrollLeft + dx; }
+    });
+    window.addEventListener('pointerup', function () {
+      if (!dragging) return;
+      dragging = false;
+      // let the click event see the dragging state, then clear it
+      setTimeout(function () { strip.classList.remove('is-dragging'); }, 0);
+      resumeLater();
+    });
+    strip.addEventListener('click', function (e) { if (moved) { e.preventDefault(); moved = false; } }, true);
+
+    // Keyboard users: focus pauses it, arrows scroll natively
+    strip.addEventListener('focusin', pause);
+    strip.addEventListener('focusout', resumeLater);
+
+    window.requestAnimationFrame(tick);
   });
 
   // Respect reduced motion for background videos

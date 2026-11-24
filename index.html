@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi Alma Communication | Social media e contenuti per le attività del Novarese</title>
-  <meta name="description" content="Agenzia di comunicazione digitale: strategia social, contenuti, montaggio e pubblicazione per le attività di Novara e provincia.">
-  <meta name="theme-color" content="#0e0e0f">
-  <link rel="icon" href="img/favicon.png">
+  <title>Mi Alma Communication | Agenzia di social media e contenuti, Novara</title>
+  <meta name="description" content="Agenzia di comunicazione digitale con base a Novara: strategia social, contenuti, montaggio e pubblicazione per attività e aziende, in zona e non solo.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon.png" sizes="64x64">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="preload" href="fonts/GeneralSans-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -27,9 +29,9 @@
     <div class="hero__media" aria-hidden="true">
       <video src="video/video_home.mp4" poster="img/foto/bts-img5.jpg" muted loop playsinline autoplay preload="metadata"></video>
     </div>
-    <header class="site-head" id="site-head">
+    <header class="site-head site-head--over" id="site-head">
   <div class="wrap site-head__in">
-    <a class="brand" href="index.html" aria-label="Mi Alma Communication, home"><img src="img/logo-mi-alma-bianco.png" alt="" width="246" height="76"></a>
+    <a class="brand" href="index.html" aria-label="Mi Alma Communication, home"><img class="brand__on-dark" src="img/logo-mialma-dark.svg" alt="" width="233" height="64"><img class="brand__on-light" src="img/logo-mialma.svg" alt="" width="233" height="64"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg>Menu</button>
     <nav class="nav" id="nav" aria-label="Principale">
       <a href="index.html" aria-current="page">Home</a>
@@ -37,15 +39,15 @@
       <a href="chi-siamo.html">Chi siamo</a>
       <a href="contatti.html">Contatti</a>
     </nav>
-    <a class="btn btn--light" href="https://wa.me/393518279049?text=Ciao%20Gaia!%20Ho%20visto%20il%20sito%20di%20Mi%20Alma%20e%20vorrei%20parlarti%20della%20mia%20attivit%C3%A0." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Scrivici</a>
+    <a class="btn btn--light head-cta" href="https://wa.me/393518279049?text=Ciao%20Gaia!%20Ho%20visto%20il%20sito%20di%20Mi%20Alma%20e%20vorrei%20parlarti%20della%20mia%20attivit%C3%A0." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Scrivici</a>
   </div>
 </header>
     <div class="wrap hero__body">
-      <h1 id="titolo" class="t-hero">Contenuti e social media per le attività del Novarese.</h1>
+      <h1 id="titolo" class="t-hero">Contenuti e social media che fanno crescere la tua attività.</h1>
       <div class="hero__side">
         <p>Strategia, contenuti, montaggio e pubblicazione. Un solo referente per tutta la tua comunicazione sui social.</p>
         <div class="actions">
-          <a class="btn btn--accent" href="#profili">Guarda i profili <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn--accent" href="#profili">Scopri di più <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           <a class="btn btn--light" href="https://wa.me/393518279049?text=Ciao%20Gaia!%20Ho%20visto%20il%20sito%20di%20Mi%20Alma%20e%20vorrei%20parlarti%20della%20mia%20attivit%C3%A0." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Scrivici su WhatsApp</a>
         </div>
       </div>
@@ -55,7 +57,7 @@
 
 <section class="section intro" aria-labelledby="t-noi">
   <div class="wrap statement">
-    <h2 id="t-noi" class="t-l">Mi Alma è un'agenzia di comunicazione digitale. Costruiamo strategie social su misura e gestiamo i profili delle attività del territorio.</h2>
+    <h2 id="t-noi" class="t-l">Mi Alma è un'agenzia di comunicazione digitale. Costruiamo strategie social su misura e gestiamo i profili di attività e aziende, dalla prima idea alla pubblicazione.</h2>
     <a class="link" href="chi-siamo.html">Chi siamo <svg aria-hidden="true"><use href="#i-right"/></svg></a>
   </div>
 </section>
@@ -64,7 +66,6 @@
   <div class="wrap">
     <div class="section-head">
       <h2 id="t-profili" class="t-xl">Alcuni esempi dei nostri profili</h2>
-      <p class="lead">Scorri lo schermo del telefono, oppure passa da Profilo a Post.</p>
     </div>
     <ul class="work-grid">
       <li class="work">
@@ -133,184 +134,130 @@
 
 <section class="section section--mist collab" aria-labelledby="t-collab">
   <div class="wrap section-head">
-    <h2 id="t-collab" class="t-xl">Collaborazioni attualmente attive</h2>
-    <p class="lead">Le attività di cui oggi gestiamo i social.</p>
+    <h2 id="t-collab" class="t-xl">Hanno scelto di collaborare con noi</h2>
   </div>
-  <div class="marquee" aria-label="Clienti attivi">
+  <div class="marquee" data-marquee role="region" aria-label="Clienti che collaborano con noi, scorri per vederli tutti" tabindex="0">
     <ul class="marquee__track">
-      <li class="collab-item">
-        <img src="img/loghi/camerona.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>La Camerona</strong>
-          <a href="https://www.instagram.com/osterialacamerona/" target="_blank" rel="noopener">@osterialacamerona</a>
-          <span>822 follower</span>
-          <span class="collab-since">Attiva da gennaio 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/osterialacamerona/" target="_blank" rel="noopener" aria-label="La Camerona su Instagram, collabora con noi da gennaio 2025">
+          <img src="img/loghi/camerona.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>La Camerona</strong><span class="collab-since">Da gennaio 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/totauto.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Totauto</strong>
-          <a href="https://www.instagram.com/totauto_novara/" target="_blank" rel="noopener">@totauto_novara</a>
-          <span>629 follower</span>
-          <span class="collab-since">Attiva da settembre 2024</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/totauto_novara/" target="_blank" rel="noopener" aria-label="Totauto su Instagram, collabora con noi da settembre 2024">
+          <img src="img/loghi/totauto.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Totauto</strong><span class="collab-since">Da settembre 2024</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/cattabreghetta.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Cascina Cattabreghetta</strong>
-          <a href="https://www.instagram.com/cascinacattabreghetta/" target="_blank" rel="noopener">@cascinacattabreghetta</a>
-          <span>7.652 follower</span>
-          <span class="collab-since">Attiva da luglio 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/cascinacattabreghetta/" target="_blank" rel="noopener" aria-label="Cascina Cattabreghetta su Instagram, collabora con noi da luglio 2025">
+          <img src="img/loghi/cattabreghetta.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Cascina Cattabreghetta</strong><span class="collab-since">Da luglio 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/saravilla.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Sara Villa</strong>
-          <a href="https://www.instagram.com/sara_villa_event/" target="_blank" rel="noopener">@sara_villa_event</a>
-          <span>414 follower</span>
-          <span class="collab-since">Attiva da marzo 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/sara_villa_event/" target="_blank" rel="noopener" aria-label="Sara Villa su Instagram, collabora con noi da marzo 2025">
+          <img src="img/loghi/saravilla.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Sara Villa</strong><span class="collab-since">Da marzo 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/monrepos.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Monrepos Viaggi</strong>
-          <a href="https://www.instagram.com/monreposviaggi/" target="_blank" rel="noopener">@monreposviaggi</a>
-          <span>2.791 follower</span>
-          <span class="collab-since">Attiva da ottobre 2024</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/monreposviaggi/" target="_blank" rel="noopener" aria-label="Monrepos Viaggi su Instagram, collabora con noi da ottobre 2024">
+          <img src="img/loghi/monrepos.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Monrepos Viaggi</strong><span class="collab-since">Da ottobre 2024</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/vecchiadogana.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Vecchia Dogana</strong>
-          <a href="https://www.instagram.com/vecchia_dogana/" target="_blank" rel="noopener">@vecchia_dogana</a>
-          <span>1.699 follower</span>
-          <span class="collab-since">Attiva da aprile 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/vecchia_dogana/" target="_blank" rel="noopener" aria-label="Vecchia Dogana su Instagram, collabora con noi da aprile 2025">
+          <img src="img/loghi/vecchiadogana.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Vecchia Dogana</strong><span class="collab-since">Da aprile 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/euroedil.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Euroedil Group</strong>
-          <a href="https://www.instagram.com/euroedilgroup_novara/" target="_blank" rel="noopener">@euroedilgroup_novara</a>
-          <span>250 follower</span>
-          <span class="collab-since">Attiva da maggio 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/euroedilgroup_novara/" target="_blank" rel="noopener" aria-label="Euroedil Group su Instagram, collabora con noi da maggio 2025">
+          <img src="img/loghi/euroedil.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Euroedil Group</strong><span class="collab-since">Da maggio 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/cittadella.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Cittadella Auto</strong>
-          <a href="https://www.instagram.com/cittadella_auto/" target="_blank" rel="noopener">@cittadella_auto</a>
-          <span>667 follower</span>
-          <span class="collab-since">Attiva da giugno 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/cittadella_auto/" target="_blank" rel="noopener" aria-label="Cittadella Auto su Instagram, collabora con noi da giugno 2025">
+          <img src="img/loghi/cittadella.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Cittadella Auto</strong><span class="collab-since">Da giugno 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/immotechedile.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Immotechedile</strong>
-          <a href="https://www.instagram.com/immotechedile_novara/" target="_blank" rel="noopener">@immotechedile_novara</a>
-          <span>359 follower</span>
-          <span class="collab-since">Attiva da febbraio 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/immotechedile_novara/" target="_blank" rel="noopener" aria-label="Immotechedile su Instagram, collabora con noi da febbraio 2025">
+          <img src="img/loghi/immotechedile.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Immotechedile</strong><span class="collab-since">Da febbraio 2025</span></span>
+        </a>
       </li>
     </ul>
     <ul class="marquee__track" aria-hidden="true">
-      <li class="collab-item">
-        <img src="img/loghi/camerona.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>La Camerona</strong>
-          <a href="https://www.instagram.com/osterialacamerona/" target="_blank" rel="noopener" tabindex="-1">@osterialacamerona</a>
-          <span>822 follower</span>
-          <span class="collab-since">Attiva da gennaio 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/osterialacamerona/" target="_blank" rel="noopener" aria-label="La Camerona su Instagram, collabora con noi da gennaio 2025" tabindex="-1">
+          <img src="img/loghi/camerona.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>La Camerona</strong><span class="collab-since">Da gennaio 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/totauto.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Totauto</strong>
-          <a href="https://www.instagram.com/totauto_novara/" target="_blank" rel="noopener" tabindex="-1">@totauto_novara</a>
-          <span>629 follower</span>
-          <span class="collab-since">Attiva da settembre 2024</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/totauto_novara/" target="_blank" rel="noopener" aria-label="Totauto su Instagram, collabora con noi da settembre 2024" tabindex="-1">
+          <img src="img/loghi/totauto.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Totauto</strong><span class="collab-since">Da settembre 2024</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/cattabreghetta.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Cascina Cattabreghetta</strong>
-          <a href="https://www.instagram.com/cascinacattabreghetta/" target="_blank" rel="noopener" tabindex="-1">@cascinacattabreghetta</a>
-          <span>7.652 follower</span>
-          <span class="collab-since">Attiva da luglio 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/cascinacattabreghetta/" target="_blank" rel="noopener" aria-label="Cascina Cattabreghetta su Instagram, collabora con noi da luglio 2025" tabindex="-1">
+          <img src="img/loghi/cattabreghetta.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Cascina Cattabreghetta</strong><span class="collab-since">Da luglio 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/saravilla.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Sara Villa</strong>
-          <a href="https://www.instagram.com/sara_villa_event/" target="_blank" rel="noopener" tabindex="-1">@sara_villa_event</a>
-          <span>414 follower</span>
-          <span class="collab-since">Attiva da marzo 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/sara_villa_event/" target="_blank" rel="noopener" aria-label="Sara Villa su Instagram, collabora con noi da marzo 2025" tabindex="-1">
+          <img src="img/loghi/saravilla.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Sara Villa</strong><span class="collab-since">Da marzo 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/monrepos.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Monrepos Viaggi</strong>
-          <a href="https://www.instagram.com/monreposviaggi/" target="_blank" rel="noopener" tabindex="-1">@monreposviaggi</a>
-          <span>2.791 follower</span>
-          <span class="collab-since">Attiva da ottobre 2024</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/monreposviaggi/" target="_blank" rel="noopener" aria-label="Monrepos Viaggi su Instagram, collabora con noi da ottobre 2024" tabindex="-1">
+          <img src="img/loghi/monrepos.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Monrepos Viaggi</strong><span class="collab-since">Da ottobre 2024</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/vecchiadogana.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Vecchia Dogana</strong>
-          <a href="https://www.instagram.com/vecchia_dogana/" target="_blank" rel="noopener" tabindex="-1">@vecchia_dogana</a>
-          <span>1.699 follower</span>
-          <span class="collab-since">Attiva da aprile 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/vecchia_dogana/" target="_blank" rel="noopener" aria-label="Vecchia Dogana su Instagram, collabora con noi da aprile 2025" tabindex="-1">
+          <img src="img/loghi/vecchiadogana.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Vecchia Dogana</strong><span class="collab-since">Da aprile 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/euroedil.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Euroedil Group</strong>
-          <a href="https://www.instagram.com/euroedilgroup_novara/" target="_blank" rel="noopener" tabindex="-1">@euroedilgroup_novara</a>
-          <span>250 follower</span>
-          <span class="collab-since">Attiva da maggio 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/euroedilgroup_novara/" target="_blank" rel="noopener" aria-label="Euroedil Group su Instagram, collabora con noi da maggio 2025" tabindex="-1">
+          <img src="img/loghi/euroedil.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Euroedil Group</strong><span class="collab-since">Da maggio 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/cittadella.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Cittadella Auto</strong>
-          <a href="https://www.instagram.com/cittadella_auto/" target="_blank" rel="noopener" tabindex="-1">@cittadella_auto</a>
-          <span>667 follower</span>
-          <span class="collab-since">Attiva da giugno 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/cittadella_auto/" target="_blank" rel="noopener" aria-label="Cittadella Auto su Instagram, collabora con noi da giugno 2025" tabindex="-1">
+          <img src="img/loghi/cittadella.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Cittadella Auto</strong><span class="collab-since">Da giugno 2025</span></span>
+        </a>
       </li>
-      <li class="collab-item">
-        <img src="img/loghi/immotechedile.png" alt="" width="56" height="56" loading="lazy">
-        <div>
-          <strong>Immotechedile</strong>
-          <a href="https://www.instagram.com/immotechedile_novara/" target="_blank" rel="noopener" tabindex="-1">@immotechedile_novara</a>
-          <span>359 follower</span>
-          <span class="collab-since">Attiva da febbraio 2025</span>
-        </div>
+      <li>
+        <a class="collab-item" href="https://www.instagram.com/immotechedile_novara/" target="_blank" rel="noopener" aria-label="Immotechedile su Instagram, collabora con noi da febbraio 2025" tabindex="-1">
+          <img src="img/loghi/immotechedile.png" alt="" width="56" height="56" loading="lazy">
+          <span class="collab-item__txt"><strong>Immotechedile</strong><span class="collab-since">Da febbraio 2025</span></span>
+        </a>
       </li>
     </ul>
   </div>
 </section>
 
 <section class="cta" aria-labelledby="t-cta">
-  <div class="cta__frame cta__frame--accent">
-    <div class="wrap cta__in">
-      <h2 id="t-cta" class="t-xl">Parliamo della tua attività.</h2>
-      <div class="cta__side">
+  <div class="wrap">
+    <div class="cta__frame cta__frame--accent">
+      <img class="cta__mark" src="img/monogram-white.svg" alt="" width="100" height="100" loading="lazy">
+      <div class="cta__in">
+        <h2 id="t-cta" class="t-xl">Parliamo della tua attività.</h2>
         <p>La prima chiacchierata è gratuita e senza impegno. Scrivici su WhatsApp o compila il modulo.</p>
         <div class="actions">
           <a class="btn btn--light" href="https://wa.me/393518279049?text=Ciao%20Gaia!%20Ho%20visto%20il%20sito%20di%20Mi%20Alma%20e%20vorrei%20parlarti%20della%20mia%20attivit%C3%A0." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Scrivici su WhatsApp</a>
@@ -326,8 +273,8 @@
   <div class="wrap">
     <div class="foot__grid">
       <div class="foot__brand">
-        <img src="img/logo-mi-alma.png" alt="Mi Alma Communication" width="246" height="76">
-        <p>Agenzia di comunicazione digitale. Social media e contenuti per le attività di Novara e provincia.</p>
+        <img src="img/logo-mialma-dark.svg" alt="Mi Alma Communication" width="233" height="64">
+        <p>Agenzia di comunicazione digitale con base a Novara. Social media e contenuti per attività e aziende, in zona e non solo.</p>
       </div>
       <div>
         <h2>Pagine</h2>
@@ -348,7 +295,7 @@
     </div>
     <div class="foot__base">
       <p>© 2026 Mi Alma Communication</p>
-      <p>Novara e provincia</p>
+      <p>Base a Novara, lavoriamo ovunque</p>
     </div>
   </div>
 </footer>
