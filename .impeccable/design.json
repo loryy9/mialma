@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T12:00:00Z",
+  "title": "Design System: Mi Alma Communication",
+  "extensions": {
+    "colorMeta": {
+      "black": { "role": "neutral", "displayName": "Studio Black", "tonalRamp": ["#0e0e0f", "#18181a", "#2b2b2e", "#4a4a4e", "#6b6b70", "#a3a3a8", "#e1e1dd", "#f3f3f1"] },
+      "black-raised": { "role": "neutral", "displayName": "Raised Black", "tonalRamp": ["#0e0e0f", "#18181a", "#2b2b2e", "#4a4a4e", "#6b6b70", "#a3a3a8", "#e1e1dd", "#f3f3f1"] },
+      "black-line": { "role": "neutral", "displayName": "Black Hairline", "tonalRamp": ["#0e0e0f", "#18181a", "#2b2b2e", "#4a4a4e", "#6b6b70", "#a3a3a8", "#e1e1dd", "#f3f3f1"] },
+      "white": { "role": "neutral", "displayName": "Paper White", "tonalRamp": ["#121213", "#2a2a2d", "#5d5d62", "#a9a9a4", "#cfcfca", "#e1e1dd", "#f3f3f1", "#ffffff"] },
+      "mist": { "role": "neutral", "displayName": "Mist", "tonalRamp": ["#121213", "#2a2a2d", "#5d5d62", "#a9a9a4", "#cfcfca", "#e1e1dd", "#f3f3f1", "#ffffff"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "tonalRamp": ["#121213", "#2a2a2d", "#5d5d62", "#a9a9a4", "#cfcfca", "#e1e1dd", "#f3f3f1", "#ffffff"] },
+      "text": { "role": "neutral", "displayName": "Ink", "tonalRamp": ["#0e0e0f", "#121213", "#2a2a2d", "#5d5d62", "#a9a9a4", "#cfcfca", "#e1e1dd", "#f3f3f1"] },
+      "text-muted": { "role": "neutral", "displayName": "Graphite", "tonalRamp": ["#0e0e0f", "#121213", "#2a2a2d", "#5d5d62", "#a9a9a4", "#cfcfca", "#e1e1dd", "#f3f3f1"] },
+      "text-inverse": { "role": "neutral", "displayName": "Inverse Ink", "tonalRamp": ["#18181a", "#2b2b2e", "#4a4a4e", "#6b6b70", "#a3a3a8", "#d6d6d3", "#f5f5f3", "#ffffff"] },
+      "text-inverse-muted": { "role": "neutral", "displayName": "Inverse Graphite", "tonalRamp": ["#18181a", "#2b2b2e", "#4a4a4e", "#6b6b70", "#a3a3a8", "#d6d6d3", "#f5f5f3", "#ffffff"] },
+      "accent": { "role": "primary", "displayName": "Mi Alma Pink", "tonalRamp": ["#3d0420", "#6b073a", "#b30a60", "#d10f72", "#e44a95", "#ef85b8", "#f7c1db", "#fce8f2"] },
+      "accent-hover": { "role": "primary", "displayName": "Pressed Pink", "tonalRamp": ["#3d0420", "#6b073a", "#b30a60", "#d10f72", "#e44a95", "#ef85b8", "#f7c1db", "#fce8f2"] },
+      "whatsapp": { "role": "secondary", "displayName": "WhatsApp Green", "tonalRamp": ["#05301a", "#0b5a31", "#128c4a", "#1fb85a", "#25d366", "#6be29a", "#b0f0c9", "#e6fbef"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero h1 and inner-page titles only." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings, home statement, CTA headings." },
+      "headline-small": { "displayName": "Headline Small", "purpose": "Service-card titles, form and media-split headings." },
+      "title": { "displayName": "Title", "purpose": "Extras, values and other card titles." },
+      "title-small": { "displayName": "Title Small", "purpose": "Small heading step." },
+      "lead": { "displayName": "Lead", "purpose": "Muted paragraph beside a section heading, max 40em." },
+      "body": { "displayName": "Body", "purpose": "Running text; 16px under 640px." },
+      "label": { "displayName": "Label", "purpose": "Buttons, nav links, form labels." }
+    },
+    "shadows": [
+      { "name": "phone-body", "value": "inset 0 0 0 1px #3d3d40, 0 30px 50px -30px rgba(0,0,0,.9)", "purpose": "iPhone mockup bezel edge and drop on the dark work section." },
+      { "name": "floating-action", "value": "0 2px 4px rgba(0,0,0,.12), 0 14px 32px -10px rgba(0,0,0,.45)", "purpose": "Floating WhatsApp pill at rest." },
+      { "name": "floating-action-hover", "value": "0 4px 8px rgba(0,0,0,.14), 0 20px 38px -10px rgba(0,0,0,.5)", "purpose": "Floating WhatsApp pill on hover." },
+      { "name": "menu-dropdown", "value": "0 20px 40px -12px rgba(0,0,0,.35)", "purpose": "Mobile nav dropdown card only." },
+      { "name": "hero-scrim", "value": "linear-gradient(180deg, rgba(14,14,15,.7) 0%, rgba(14,14,15,.3) 28%, rgba(14,14,15,.4) 55%, rgba(14,14,15,.94) 100%)", "purpose": "Scrim over the hero video so nav and bottom-anchored text stay legible." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.22, 1, .36, 1)", "purpose": "House easing for every transition and the hero rise." },
+      { "name": "hero-rise", "value": "rise .9s, translateY(18px) to 0 with fade, delays 0 / .12s / .22s", "purpose": "Hero content on page load only; never on scroll." },
+      { "name": "hover-colour", "value": ".2s to .25s", "purpose": "Colour, background and border changes on buttons, links, rows." },
+      { "name": "hover-transform", "value": ".3s", "purpose": "Arrow nudges, FAQ toggle rotation, WhatsApp lift." },
+      { "name": "image-zoom", "value": "transform scale(1.03) over .8s", "purpose": "Photo row images on hover." },
+      { "name": "reduced-motion", "value": "animation none, transitions .01ms, scroll auto, autoplay video paused", "purpose": "prefers-reduced-motion: reduce." }
+    ],
+    "breakpoints": [
+      { "name": "rail", "value": "1100px" },
+      { "name": "stack", "value": "900px" },
+      { "name": "phone", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Accent Button",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "Primary action in a group; pink pill.",
+      "html": "<a class=\"ds-btn ds-btn-accent\" href=\"#\">Guarda i lavori <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1px solid transparent; font: 500 .98rem/1 Switzer, 'Helvetica Neue', Arial, sans-serif; text-decoration: none; cursor: pointer; transition: background-color .25s cubic-bezier(.22,1,.36,1), border-color .25s cubic-bezier(.22,1,.36,1); } .ds-btn svg { transition: transform .3s cubic-bezier(.22,1,.36,1); } .ds-btn:hover svg { transform: translate(2px,-2px); } .ds-btn:focus-visible { outline: 2px solid #d10f72; outline-offset: 3px; } .ds-btn-accent { background: #d10f72; color: #fff; } .ds-btn-accent:hover { background: #b30a60; }"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "White pill used on dark grounds, typically for WhatsApp.",
+      "html": "<div style=\"background:#0e0e0f;padding:24px;border-radius:16px\"><a class=\"ds-btn-light\" href=\"#\">Scrivici su WhatsApp</a></div>",
+      "css": ".ds-btn-light { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: #fff; color: #0e0e0f; font: 500 .98rem/1 Switzer, 'Helvetica Neue', Arial, sans-serif; text-decoration: none; transition: background-color .25s cubic-bezier(.22,1,.36,1); } .ds-btn-light:hover { background: #f3f3f1; } .ds-btn-light:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Hairline-bordered secondary pill.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Compila il modulo</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1px solid #e1e1dd; background: transparent; color: #121213; font: 500 .98rem/1 Switzer, 'Helvetica Neue', Arial, sans-serif; text-decoration: none; transition: border-color .25s cubic-bezier(.22,1,.36,1); } .ds-btn-ghost:hover { border-color: #121213; } .ds-btn-ghost:focus-visible { outline: 2px solid #d10f72; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labelled form field with pink focus halo.",
+      "html": "<label class=\"ds-field\"><span>Nome e cognome *</span><input type=\"text\" placeholder=\"Gaia Zerbin\"></label>",
+      "css": ".ds-field { display: grid; gap: 8px; font: 500 .92rem Switzer, 'Helvetica Neue', Arial, sans-serif; color: #121213; max-width: 360px; } .ds-field input { font: 400 1rem/1.4 Switzer, 'Helvetica Neue', Arial, sans-serif; color: #121213; background: #fff; border: 1px solid #cfcfca; border-radius: 10px; padding: 13px 14px; transition: border-color .2s, box-shadow .2s; } .ds-field input::placeholder { color: #6b6b70; } .ds-field input:hover { border-color: #a9a9a4; } .ds-field input:focus { outline: none; border-color: #121213; box-shadow: 0 0 0 3px rgba(209,15,114,.18); }"
+    },
+    {
+      "name": "Light Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Inner-page header nav: muted pill links, mist on hover and current.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Home</a><a href=\"#\" aria-current=\"page\">Servizi</a><a href=\"#\">Chi siamo</a><a href=\"#\">Contatti</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 4px; font-family: Switzer, 'Helvetica Neue', Arial, sans-serif; } .ds-nav a { color: #5d5d62; text-decoration: none; font-size: .96rem; font-weight: 500; padding: 8px 14px; border-radius: 999px; transition: color .2s, background-color .2s; } .ds-nav a:hover { color: #121213; background: #f3f3f1; } .ds-nav a[aria-current=page] { color: #121213; background: #f3f3f1; } .ds-nav a:focus-visible { outline: 2px solid #d10f72; outline-offset: 3px; }"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Hairline-ruled service link with circular arrow that fills pink on hover.",
+      "html": "<a class=\"ds-svc\" href=\"#\"><span><strong>Strategia social su misura</strong><em>Analizziamo mercato, concorrenti e pubblico.</em></span><i><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></i></a>",
+      "css": ".ds-svc { display: grid; grid-template-columns: 1fr 40px; gap: 20px; padding: 26px 0; border-block: 1px solid #e1e1dd; text-decoration: none; color: #121213; max-width: 560px; } .ds-svc strong { display: block; font: 500 1.6rem/1.04 'General Sans', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -.025em; transition: color .2s; } .ds-svc em { display: block; font: normal 400 1rem/1.6 Switzer, sans-serif; color: #5d5d62; margin-top: 6px; } .ds-svc i { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #e1e1dd; display: grid; place-items: center; transition: background-color .25s, border-color .25s, color .25s; } .ds-svc:hover strong { color: #d10f72; } .ds-svc:hover i { background: #d10f72; border-color: #d10f72; color: #fff; } .ds-svc:focus-visible { outline: 2px solid #d10f72; outline-offset: 3px; }"
+    },
+    {
+      "name": "Process Step",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "White 16px card on a mist band with a pink tabular number.",
+      "html": "<div style=\"background:#f3f3f1;padding:24px\"><div class=\"ds-step\"><span>01</span><h3>Ci conosciamo</h3><p>Guardiamo il profilo che hai oggi e le persone che vuoi raggiungere.</p></div></div>",
+      "css": ".ds-step { background: #fff; border-radius: 16px; padding: 28px 26px 30px; display: flex; flex-direction: column; gap: 12px; max-width: 280px; font-family: Switzer, 'Helvetica Neue', Arial, sans-serif; } .ds-step span { font: 500 .95rem 'General Sans', sans-serif; color: #d10f72; font-variant-numeric: tabular-nums; } .ds-step h3 { margin: 28px 0 0; font: 500 1.4rem/1.04 'General Sans', sans-serif; letter-spacing: -.02em; color: #121213; } .ds-step p { margin: 0; color: #5d5d62; font-size: .97rem; line-height: 1.6; }"
+    },
+    {
+      "name": "Work Card with Phone",
+      "kind": "custom",
+      "refersTo": "work-card",
+      "description": "Signature: raised-black card with an iPhone mockup, Profilo/Post toggle and client info.",
+      "html": "<div class=\"ds-work\"><div class=\"ds-phone\"><span class=\"ds-island\"></span><div class=\"ds-screen\"></div></div><div class=\"ds-views\"><button aria-pressed=\"true\">Profilo</button><button aria-pressed=\"false\">Post</button></div><div class=\"ds-info\"><h3>La Camerona</h3><p>Location per eventi, Cerano</p></div></div>",
+      "css": ".ds-work { width: 300px; background: #18181a; border: 1px solid #2b2b2e; border-radius: 16px; padding: 36px 28px 26px; display: flex; flex-direction: column; align-items: center; color: #f5f5f3; font-family: Switzer, 'Helvetica Neue', Arial, sans-serif; } .ds-phone { position: relative; width: 100%; max-width: 230px; padding: 9px; border-radius: 46px; background: #050505; box-shadow: inset 0 0 0 1px #3d3d40, 0 30px 50px -30px rgba(0,0,0,.9); } .ds-island { position: absolute; top: 19px; left: 50%; transform: translateX(-50%); width: 30%; height: 21px; border-radius: 20px; background: #000; } .ds-screen { aspect-ratio: 1179 / 2556; border-radius: 37px; background: linear-gradient(#fff 0 22%, #f3f3f1 22% 100%); } .ds-views { display: inline-flex; margin-top: 16px; padding: 3px; border-radius: 999px; background: #0b0b0c; border: 1px solid #2b2b2e; } .ds-views button { font: 500 .82rem/1 Switzer, sans-serif; color: #a3a3a8; background: transparent; border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; transition: background-color .2s, color .2s; } .ds-views button:hover { color: #fff; } .ds-views button[aria-pressed=true] { background: #fff; color: #0e0e0f; } .ds-views button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; } .ds-info { width: 100%; margin-top: 22px; padding-top: 18px; border-top: 1px solid #2b2b2e; } .ds-info h3 { margin: 0; font: 500 1.2rem/1.04 'General Sans', sans-serif; letter-spacing: -.02em; } .ds-info p { margin: 4px 0 0; font-size: .9rem; color: #a3a3a8; }"
+    },
+    {
+      "name": "Accent CTA Band",
+      "kind": "card",
+      "refersTo": "cta-accent",
+      "description": "The one solid pink field per page: heading left, text and buttons right.",
+      "html": "<div class=\"ds-cta\"><h2>Parliamo della tua attività.</h2><div><p>La prima chiacchierata è gratuita e senza impegno.</p><a class=\"ds-cta-light\" href=\"#\">Scrivici su WhatsApp</a><a class=\"ds-cta-outline\" href=\"#\">Compila il modulo</a></div></div>",
+      "css": ".ds-cta { background: #d10f72; color: #fff; border-radius: 24px; padding: 64px 40px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: end; font-family: Switzer, 'Helvetica Neue', Arial, sans-serif; } .ds-cta h2 { margin: 0; font: 500 2.6rem/1.04 'General Sans', sans-serif; letter-spacing: -.03em; } .ds-cta p { margin: 0 0 22px; color: rgba(255,255,255,.92); } .ds-cta a { display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; font: 500 .98rem/1 Switzer, sans-serif; text-decoration: none; margin: 0 10px 10px 0; transition: background-color .25s, border-color .25s; } .ds-cta-light { background: #fff; color: #0e0e0f; } .ds-cta-light:hover { background: #f3f3f1; } .ds-cta-outline { border: 1px solid rgba(255,255,255,.6); color: #fff; } .ds-cta-outline:hover { border-color: #fff; background: rgba(255,255,255,.1); } .ds-cta a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Floating WhatsApp",
+      "kind": "button",
+      "refersTo": "whatsapp-float",
+      "description": "The only use of WhatsApp green; the only lifted shadow besides the phone.",
+      "html": "<a class=\"ds-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\" fill=\"currentColor\"><path d=\"M12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45c6.55 0 11.9-5.34 11.9-11.9C23.94 5.34 18.6 0 12.05 0z\"/></svg><span>Scrivici</span></a>",
+      "css": ".ds-wa { display: inline-flex; align-items: center; gap: 10px; height: 56px; padding: 0 22px 0 16px; border-radius: 999px; background: #25d366; color: #05301a; font: 600 1rem Switzer, 'Helvetica Neue', Arial, sans-serif; text-decoration: none; box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 14px 32px -10px rgba(0,0,0,.45); transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s cubic-bezier(.22,1,.36,1); } .ds-wa:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,.14), 0 20px 38px -10px rgba(0,0,0,.5); } .ds-wa:focus-visible { outline: 2px solid #0e0e0f; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Straight-Faced Agency",
+    "overview": "Mi Alma reads as a contemporary agency portfolio played completely straight: a structured grid, alternating near-black and white sections, large real photography and video, and a single restrained pink accent. There is no theme, no metaphor, no decoration standing in for content. The proof is the clients' own Instagram feeds, shown at legible size inside iPhone frames, and every other device on the page stays quiet so those feeds and the shooting photos carry the weight.\n\nThe system is convention executed at full craft. Headings are large and tightly tracked, body text is calm and generous, dividers are hairlines, and corners follow a strict hierarchy (panels, then cards and images, then inputs, then pills). Density is low: sections breathe on a clamped 80 to 140px rhythm and grids use a narrow 12px gap so groups of cards and photos read as one block.\n\nThe world explicitly rejects themed or illustrative treatments (the user's words: \"deve essere una cosa seria. ben strutturata, non a caso\"). Seriousness comes from structure, real imagery and type, not from props.",
+    "keyCharacteristics": [
+      "Near-black and white grounds alternating section by section, with a warm mist for quiet bands.",
+      "One accent (Mi Alma pink) on primary buttons, small markers and at most one solid CTA field per page.",
+      "General Sans headings with tight negative tracking over Switzer text.",
+      "Inset rounded panels for the hero and CTA, floating 12px off the viewport edge.",
+      "Real client feeds in iPhone mockups as the signature component.",
+      "Hairline dividers and flat surfaces; shadow only on the phone and the floating WhatsApp button."
+    ],
+    "rules": [
+      { "name": "The One Pink Rule", "body": "Pink is the only accent. It marks primary actions and small markers; it fills a large surface only once per page, as the accent CTA field. Never introduce a second brand hue.", "section": "colors" },
+      { "name": "The Green Stays Put Rule", "body": "WhatsApp green appears only on the floating WhatsApp button. WhatsApp links elsewhere use the normal button vocabulary (light or accent).", "section": "colors" },
+      { "name": "The Alternation Rule", "body": "Sections alternate grounds (white, Studio Black, white, mist) so the page reads as a sequence of clear blocks. Two dark sections are never stacked.", "section": "colors" },
+      { "name": "The Tight Heading Rule", "body": "Every heading uses General Sans 500 with negative tracking (-0.01 to -0.04em, tighter as size grows) and `text-wrap: balance`. Headings are never uppercase and never letter-spaced open.", "section": "typography" },
+      { "name": "The Heading Then Lead Rule", "body": "A section opens with a heading and, beside or below it, a muted lead. There is no small label above the heading.", "section": "typography" },
+      { "name": "The Flat Surface Rule", "body": "Cards, panels, steps and rows never carry shadows. Separation is a ground change or a 1px hairline.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep pink to primary buttons, small markers (dots, numbers, checks, focus) and at most one solid CTA field per page.",
+      "Do alternate white, Studio Black and mist sections so the page reads as clear blocks.",
+      "Do follow the radius hierarchy: 24px panels, 16px cards and images, 10px inputs, pill buttons.",
+      "Do separate with 1px hairlines and ground changes; keep surfaces flat.",
+      "Do set headings in General Sans 500 with negative tracking and pair them with a muted lead.",
+      "Do use real client feeds, shooting photos and video; greyscale supporting photography so client colour stands out.",
+      "Do keep motion to the load-time hero rise and hover states, and honour reduced motion."
+    ],
+    "donts": [
+      "Don't introduce a themed or illustrative world, props or metaphors; the user rejected that (\"sembra un cartone animato\").",
+      "Don't add a second accent colour or use WhatsApp green outside the floating button.",
+      "Don't put shadows on cards, panels or rows.",
+      "Don't place small labels or eyebrows above headings.",
+      "Don't use stock imagery, invented stats, logos, testimonials or prices.",
+      "Don't add scroll-triggered reveals or decorative animation.",
+      "Don't stack two accent CTA fields or two dark sections back to back."
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+title: Contatti | Mi Alma Communication
+desc: Scrivi a Mi Alma su WhatsApp al 351 827 9049 o compila il modulo. La prima chiacchierata è gratuita.
+---
+<section class="page-top" aria-labelledby="titolo">
+  <div class="wrap page-top__in">
+    <h1 id="titolo" class="t-hero">Contatti</h1>
+    <p class="lead">Il modo più veloce è WhatsApp. Se preferisci, compila il modulo: il messaggio si apre già scritto su WhatsApp e devi solo premere invia.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="t-modulo" style="padding-top:clamp(48px,6vw,80px)">
+  <div class="wrap contact">
+    <div class="contact__form">
+      <h2 id="t-modulo" class="t-l" style="margin-bottom:24px">Raccontaci la tua attività</h2>
+      <form id="modulo" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="nome">Nome e cognome *</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required aria-describedby="nome-err">
+            <p class="err" id="nome-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="attivita">Nome dell'attività</label>
+            <input id="attivita" name="attivita" type="text" autocomplete="organization">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="settore">Settore</label>
+            <select id="settore" name="settore">
+              <option value="">Scegli il settore</option>
+              <option>Ristorazione ed eventi</option>
+              <option>Auto e motori</option>
+              <option>Edilizia e casa</option>
+              <option>Matrimoni</option>
+              <option>Viaggi e turismo</option>
+              <option>Benessere e salute</option>
+              <option>Negozio</option>
+              <option>Altro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="instagram">Il tuo profilo Instagram</label>
+            <input id="instagram" name="instagram" type="text" placeholder="@latuaattivita" autocapitalize="off" spellcheck="false">
+          </div>
+        </div>
+        <div class="field">
+          <label for="messaggio">Di cosa hai bisogno? *</label>
+          <textarea id="messaggio" name="messaggio" required placeholder="Es. ho un ristorante, pubblico poco e vorrei far conoscere le serate a tema." aria-describedby="messaggio-err"></textarea>
+          <p class="err" id="messaggio-err" aria-live="polite"></p>
+        </div>
+        <button class="btn btn--accent" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Invia su WhatsApp</button>
+        <p class="form-note" id="modulo-stato" role="status">* Campi obbligatori. Il sito non salva i tuoi dati: il messaggio parte da WhatsApp.</p>
+      </form>
+    </div>
+    <aside class="contact__side dark" aria-label="Recapiti">
+      <div class="contact__item"><small>WhatsApp</small><a href="https://wa.me/393518279049" target="_blank" rel="noopener">351 827 9049</a></div>
+      <div class="contact__item"><small>Instagram</small><a href="https://www.instagram.com/mialma.cmc/" target="_blank" rel="noopener">@mialma.cmc</a></div>
+      <div class="contact__item"><small>Zona</small><p>Novara e provincia. Le riprese le facciamo da te.</p></div>
+      <div class="contact__item">
+        <small>Cosa succede dopo</small>
+        <ol class="next">
+          <li>Ti rispondiamo e fissiamo una chiacchierata, al telefono o di persona.</li>
+          <li>Guardiamo insieme il tuo profilo e i tuoi concorrenti.</li>
+          <li>Ti mandiamo una proposta su misura.</li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</section>
